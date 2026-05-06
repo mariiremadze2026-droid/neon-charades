@@ -5,17 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>მთის წყევლა - Battle Royale</title>
     <script src="https://cdn.jsdelivr.net/npm/phaser@3.80.1/dist/phaser.min.js"></script>
+    
     <style>
-        body { 
-            margin: 0; 
-            padding: 0; 
-            background: #000; 
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #0a0a0a;
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
             overflow: hidden;
-            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #game-container {
+            border: 5px solid #ff3333;
+            box-shadow: 0 0 50px rgba(255, 51, 51, 0.7);
+            border-radius: 10px;
+            overflow: hidden;
+            background: #000;
+        }
+        .header {
+            background: linear-gradient(to right, #1a1a2e, #16213e);
+            padding: 15px 0;
+            text-align: center;
+            border-bottom: 4px solid #ff4444;
+        }
+        .header h1 {
+            font-size: 32px;
+            color: #ff5555;
+            text-shadow: 0 0 15px #ff0000;
+        }
+        .header p {
+            color: #ffcc00;
+            font-size: 18px;
+            margin-top: 5px;
         }
     </style>
 </head>
 <body>
+    <div id="game-container">
+        <div class="header">
+            <h1>მთის წყევლა</h1>
+            <p>BATTLE ROYALE</p>
+        </div>
+        <div id="phaser-game"></div>
+    </div>
+
     <script src="js/game.js"></script>
 </body>
 </html>
